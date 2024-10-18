@@ -1,0 +1,12 @@
+#stretch goals
+
+
+# Extra features we can implement
+
+1. set password length
+2. copy on click feature
+3. toggle symbols and numbers on/off
+4. Password strength checker
+5. Adding a dark/light mode feature
+
+
