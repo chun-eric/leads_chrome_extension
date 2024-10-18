@@ -57,7 +57,13 @@ button {
   background-color: #5f9341;
   font-size: 20px;
   cursor: pointer;
-  border: none;
+  border: 1px solid #5f9341;
+  margin-right: 5px;
+}
+
+#delete-btn {
+  color: #5f9341;
+  background-color: white;
 }
 
 #leads-list {
