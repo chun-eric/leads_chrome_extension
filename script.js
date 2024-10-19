@@ -15,25 +15,18 @@ if (leadsFromLocalStorage) {
   render(myLeads);
 }
 
-// setting up tabs
-const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
-
+// setting up tabs click event
 tabBtn.addEventListener("click", function () {
   // grab url from the current tab
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    console.log(tabs);
+    // push the current tab url to the array
     myLeads.push(tabs[0].url);
+    // save our array values to local storage
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    // render updated list
     render(myLeads);
   });
-
-  // push the url to the array
-  myLeads.push(tabs[0].url);
-
-  // save our array values to local storage
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
-
-  // render updated list
-  render(myLeads);
 });
 
 // render out each item in the myLeads array
